@@ -96,7 +96,10 @@ section {
 .secondary-btn {
     background: transparent;
     color: var(--text-main);
-    margin-left: 1rem;
+    margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .secondary-btn:hover {
@@ -185,6 +188,12 @@ nav {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
     font-weight: 400;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .hero-content p {
