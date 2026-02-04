@@ -169,35 +169,62 @@ nav {
 }
 
 .hero-content h1 {
-    font-size: clamp(3rem, 8vw, 5rem);
+    font-size: clamp(3.5rem, 10vw, 6rem);
     color: var(--white);
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h1 strong {
+    color: var(--white);
+    font-weight: 800;
 }
 
 .hero-content h3 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: var(--text-muted);
     margin-bottom: 1.5rem;
+    font-weight: 400;
 }
 
 .hero-content p {
-    max-width: 500px;
-    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
     color: var(--text-muted);
+    font-size: 1.1rem;
 }
 
 .scroll-down {
     position: absolute;
-    bottom: 30px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    animation: bounce 2s infinite;
 }
 
-.scroll-down a {
-    color: var(--primary-color);
-    font-size: 1.5rem;
+.mouse {
+    width: 25px;
+    height: 42px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse::before {
+    content: '';
+    width: 4px;
+    height: 8px;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 8px;
+    border-radius: 2px;
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 1; top: 8px; }
+    100% { opacity: 0; top: 18px; }
 }
 
 /* --- About & Stats --- */
